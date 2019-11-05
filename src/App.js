@@ -5,7 +5,7 @@ import BottomRow from './BottomRow';
 
 function App() {
 	//TODO: STEP 2 - Establish your application's state with some useState hooks.  You'll need one for the home score and another for the away score.
-	const [ home, setHome ] = useState(0);
+	const [ home, setHome ] = useState(100);
 	const [ away, setAway ] = useState(0);
 
 	return (
@@ -13,15 +13,15 @@ function App() {
 			<section className='scoreboard'>
 				<div className='topRow'>
 					<div className='home'>
-						<h2 className='home__name'>Lions</h2>
+						<h2 className='home__name'>The Doctor</h2>
 
 						{/* TODO STEP 3 - We need to change the hard-coded values in these divs to accept dynamic values from our state. */}
 
 						<div className='home__score'>{home}</div>
 					</div>
-					<div className='timer'>00:03</div>
+					<div className='timer'>00:01</div>
 					<div className='away'>
-						<h2 className='away__name'>Tigers</h2>
+						<h2 className='away__name'>The Daleks</h2>
 						<div className='away__score'>{away}</div>
 					</div>
 				</div>
@@ -30,19 +30,19 @@ function App() {
 			<section className='buttons'>
 				<div className='homeButtons'>
 					{/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-					<button onClick={() => setHome(home + 7)} className='homeButtons__touchdown'>
-						Home Touchdown
+					<button onClick={() => setHome(home + 100)} className='homeButtons__touchdown'>
+						The Tardis
 					</button>
-					<button onClick={() => setHome(home + 3)} className='homeButtons__fieldGoal'>
-						Home Field Goal
+					<button onClick={() => setHome(home + 10)} className='homeButtons__fieldGoal'>
+						Sonic Screwdriver
 					</button>
 				</div>
 				<div className='awayButtons'>
-					<button onClick={() => setAway(away + 7)} className='awayButtons__touchdown'>
-						Away Touchdown
+					<button onClick={() => setAway(away + 100)} className='awayButtons__touchdown'>
+						Dalek Fleet
 					</button>
-					<button onClick={() => setAway(away + 3)} className='awayButtons__fieldGoal'>
-						Away Field Goal
+					<button onClick={() => setAway(away + 10)} className='awayButtons__fieldGoal'>
+						Death Ray
 					</button>
 				</div>
 			</section>
